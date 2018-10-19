@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.1.3.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="XtraReport" Margins="100, 100, 208, 100" PageWidth="850" PageHeight="1100" Version="17.1" DataSource="#Ref-0">
+  <Bands>
+    <Item1 Ref="2" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="208.333328">
+      <Controls>
+        <Item1 Ref="3" ControlType="XRLabel" Name="label2" Multiline="true" Text="Viện dưỡng lão Diệu Viên&#xD;&#xA;Đ/c: phường Thủy Xuân, thị xã Hương Thủy, tỉnh Thừa Thiên Huế" SizeF="379.374969,34.375" LocationFloat="88.5416641, 25" ForeColor="DarkGray" BackColor="Transparent" Padding="2,2,0,0,96" BorderColor="Transparent">
+          <StylePriority Ref="4" UseForeColor="false" UseBackColor="false" UseBorderColor="false" />
+        </Item1>
+        <Item2 Ref="5" ControlType="XRPictureBox" Name="pictureBox1" ImageUrl="C:\Users\VanThuy\Desktop\logo.png" Sizing="StretchImage" SizeF="88.5416641,59.375" LocationFloat="0, 0" />
+        <Item3 Ref="6" ControlType="XRLabel" Name="label1" Multiline="true" Text="DANH SÁCH PHÒNG Ở &#xD;&#xA;VIỆN DƯỠNG LÃO DIỆU VIÊN" TextAlignment="TopCenter" SizeF="650,82.2916641" LocationFloat="0, 97.9166641" Font="Times New Roman, 22pt, style=Bold" Padding="2,2,0,0,96">
+          <StylePriority Ref="7" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="8" ControlType="XRTable" Name="table2" SizeF="650,28.125" LocationFloat="0, 180.208328" Font="Times New Roman, 14pt">
+          <Rows>
+            <Item1 Ref="9" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+              <Cells>
+                <Item1 Ref="10" ControlType="XRTableCell" Name="tableCell6" Weight="0.25906911716145153" Text="STT" TextAlignment="TopCenter" Font="Times New Roman, 14pt, style=Bold" BackColor="Transparent" Borders="All">
+                  <StylePriority Ref="11" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="12" ControlType="XRTableCell" Name="tableCell7" Weight="0.63467077067781408" Text="Tên phòng" TextAlignment="TopCenter" Font="Times New Roman, 14pt, style=Bold" BackColor="Transparent" Borders="All">
+                  <StylePriority Ref="13" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="14" ControlType="XRTableCell" Name="tableCell9" Weight="0.73579481234544" Text="Ngày xây dựng" TextAlignment="TopCenter" Font="Times New Roman, 14pt, style=Bold" BackColor="Transparent" Borders="All">
+                  <StylePriority Ref="15" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="16" ControlType="XRTableCell" Name="tableCell10" Weight="0.70690179042395163" Text="Số lượng tối đa" TextAlignment="TopCenter" Font="Times New Roman, 14pt, style=Bold" BackColor="Transparent" Borders="All">
+                  <StylePriority Ref="17" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="18" ControlType="XRTableCell" Name="tableCell8" Weight="0.66837910142160584" Text="Số lượng đang ở" TextAlignment="TopCenter" Font="Times New Roman, 14pt, style=Bold" BackColor="Transparent" Borders="All">
+                  <StylePriority Ref="19" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item5>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="20" UseFont="false" />
+        </Item4>
+      </Controls>
+    </Item1>
+    <Item2 Ref="21" ControlType="DetailBand" Name="detailBand1" HeightF="25">
+      <Controls>
+        <Item1 Ref="22" ControlType="XRTable" Name="table1" SizeF="650,25" LocationFloat="0, 0" Font="Times New Roman, 14pt">
+          <Rows>
+            <Item1 Ref="23" ControlType="XRTableRow" Name="tableRow1" Weight="11.5">
+              <Cells>
+                <Item1 Ref="24" ControlType="XRTableCell" Name="tableCell1" Weight="0.29273513402694318" Text="tableCell1" Borders="Left, Right, Bottom">
+                  <DataBindings>
+                    <Item1 Ref="25" PropertyName="Text" DataMember="id_phongo" />
+                  </DataBindings>
+                  <StylePriority Ref="26" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="27" ControlType="XRTableCell" Name="tableCell2" Weight="0.69871779221754815" Text="tableCell2" TextAlignment="TopCenter" Borders="Left, Right, Bottom">
+                  <DataBindings>
+                    <Item1 Ref="28" PropertyName="Text" DataMember="tenphong" />
+                  </DataBindings>
+                  <StylePriority Ref="29" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="30" ControlType="XRTableCell" Name="tableCell3" Weight="0.81623918582231547" Text="tableCell3" TextAlignment="TopRight" Borders="Left, Right, Bottom">
+                  <DataBindings>
+                    <Item1 Ref="31" FormatString="{0:M/d/yyyy}" PropertyName="Text" DataMember="ngaytaophongo" />
+                  </DataBindings>
+                  <StylePriority Ref="32" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="33" ControlType="XRTableCell" Name="tableCell4" Weight="0.78418825589693519" Text="tableCell4" TextAlignment="TopCenter" Borders="Left, Right, Bottom">
+                  <DataBindings>
+                    <Item1 Ref="34" PropertyName="Text" DataMember="toida" />
+                  </DataBindings>
+                  <StylePriority Ref="35" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="36" ControlType="XRTableCell" Name="tableCell5" Weight="0.74145296536959127" Text="tableCell5" TextAlignment="TopCenter" Borders="Left, Right, Bottom">
+                  <DataBindings>
+                    <Item1 Ref="37" PropertyName="Text" DataMember="hienco" />
+                  </DataBindings>
+                  <StylePriority Ref="38" UseBorders="false" UseTextAlignment="false" />
+                </Item5>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="39" UseFont="false" />
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="40" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="100" />
+  </Bands>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v17.1" Ref="0" Content="~Xtra#NULL" Type="System.Data.DataView" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

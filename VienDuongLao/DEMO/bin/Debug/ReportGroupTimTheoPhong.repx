@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.1.3.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="XtraReport" PageWidth="850" PageHeight="1100" Version="17.1" DataSource="#Ref-0">
+  <Bands>
+    <Item1 Ref="2" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="100" />
+    <Item2 Ref="3" ControlType="DetailBand" Name="detailBand1" HeightF="23">
+      <Controls>
+        <Item1 Ref="4" ControlType="XRLabel" Name="label6" Text="label6" SizeF="71.875,23" LocationFloat="578.125, 0" Padding="2,2,0,0,100" Borders="All">
+          <DataBindings>
+            <Item1 Ref="5" PropertyName="Text" DataMember="hienco" />
+          </DataBindings>
+          <StylePriority Ref="6" UseBorders="false" />
+        </Item1>
+        <Item2 Ref="7" ControlType="XRLabel" Name="label5" Text="label5" SizeF="294.791626,23" LocationFloat="283.333374, 0" Padding="2,2,0,0,100" Borders="All">
+          <DataBindings>
+            <Item1 Ref="8" PropertyName="Text" DataMember="quequan" />
+          </DataBindings>
+          <StylePriority Ref="9" UseBorders="false" />
+        </Item2>
+        <Item3 Ref="10" ControlType="XRLabel" Name="label4" Text="label4" SizeF="32.29167,23" LocationFloat="251.041672, 0" Padding="2,2,0,0,100" Borders="All">
+          <DataBindings>
+            <Item1 Ref="11" PropertyName="Text" DataMember="ngaysinh" />
+          </DataBindings>
+          <StylePriority Ref="12" UseBorders="false" />
+        </Item3>
+        <Item4 Ref="13" ControlType="XRLabel" Name="label3" Text="label3" SizeF="218.75,23" LocationFloat="32.2916679, 0" Padding="2,2,0,0,100" Borders="All">
+          <DataBindings>
+            <Item1 Ref="14" PropertyName="Text" DataMember="hoten" />
+          </DataBindings>
+          <StylePriority Ref="15" UseBorders="false" />
+        </Item4>
+        <Item5 Ref="16" ControlType="XRLabel" Name="label2" Text="label2" SizeF="32.2916756,23" LocationFloat="0, 0" Padding="2,2,0,0,100" Borders="All">
+          <DataBindings>
+            <Item1 Ref="17" PropertyName="Text" DataMember="id_chitietphong" />
+          </DataBindings>
+          <StylePriority Ref="18" UseBorders="false" />
+        </Item5>
+      </Controls>
+    </Item2>
+    <Item3 Ref="19" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="100" />
+    <Item4 Ref="20" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="60.5000229">
+      <GroupFields>
+        <Item1 Ref="21" FieldName="tenphong" />
+      </GroupFields>
+      <Controls>
+        <Item1 Ref="22" ControlType="XRTable" Name="table1" SizeF="650,28.1249981" LocationFloat="0, 32.3750229">
+          <Rows>
+            <Item1 Ref="23" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+              <Cells>
+                <Item1 Ref="24" ControlType="XRTableCell" Name="tableCell1" Weight="0.19375001769540212" Text="STT" Font="Times New Roman, 11pt, style=Bold" BackColor="Transparent" Borders="All">
+                  <StylePriority Ref="25" UseFont="false" UseBackColor="false" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="26" ControlType="XRTableCell" Name="tableCell2" Weight="1.3124999517870197" Text="Họ và tên" TextAlignment="TopCenter" Font="Times New Roman, 11pt, style=Bold" BackColor="Transparent" Borders="All">
+                  <StylePriority Ref="27" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="28" ControlType="XRTableCell" Name="tableCell4" Weight="0.19375002160996133" Text="Tuổi" Font="Times New Roman, 11pt, style=Bold" BackColor="Transparent" Borders="All">
+                  <StylePriority Ref="29" UseFont="false" UseBackColor="false" UseBorders="false" />
+                </Item3>
+                <Item4 Ref="30" ControlType="XRTableCell" Name="tableCell5" Weight="1.7687501790710816" Text="Quê quán" TextAlignment="TopCenter" Font="Times New Roman, 11pt, style=Bold" BackColor="Transparent" Borders="All">
+                  <StylePriority Ref="31" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="32" ControlType="XRTableCell" Name="tableCell3" Weight="0.43124987968724371" Text="Đang ở" TextAlignment="TopCenter" Font="Times New Roman, 11pt, style=Bold" BackColor="Transparent" Borders="All">
+                  <StylePriority Ref="33" UseFont="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item5>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+        <Item2 Ref="34" ControlType="XRLabel" Name="label1" Text="label1" SizeF="100,23" LocationFloat="0, 9.375023" Font="Times New Roman, 14pt" Padding="2,2,0,0,100">
+          <DataBindings>
+            <Item1 Ref="35" PropertyName="Text" DataMember="tenphong" />
+          </DataBindings>
+          <StylePriority Ref="36" UseFont="false" />
+        </Item2>
+      </Controls>
+    </Item4>
+  </Bands>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v17.1" Ref="0" Content="~Xtra#NULL" Type="System.Data.DataView" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>
