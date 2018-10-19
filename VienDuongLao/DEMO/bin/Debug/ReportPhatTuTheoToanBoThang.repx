@@ -67,12 +67,12 @@
     </Item5>
     <Item6 Ref="32" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="60.4999847">
       <GroupFields>
-        <Item1 Ref="33" FieldName="ngaytaotochuc" />
+        <Item1 Ref="33" FieldName="thang" />
       </GroupFields>
       <Controls>
-        <Item1 Ref="34" ControlType="XRLabel" Name="label5" Text="label5" TextAlignment="TopCenter" SizeF="650,23" LocationFloat="1.58945713E-05, 12.5" Font="Times New Roman, 16pt, style=Bold" Padding="2,2,0,0,96">
+        <Item1 Ref="34" ControlType="XRLabel" Name="label5" Text="label5" TextAlignment="TopLeft" SizeF="94.5834351,23" LocationFloat="331.874939, 10.0000067" Font="Times New Roman, 14pt, style=Bold" Padding="2,2,0,0,96">
           <DataBindings>
-            <Item1 Ref="35" FormatString="{0:dd MMMM yyyy}" PropertyName="Text" DataMember="ngaytaotochuc" />
+            <Item1 Ref="35" PropertyName="Text" DataMember="thang" />
           </DataBindings>
           <StylePriority Ref="36" UseFont="false" UseTextAlignment="false" />
         </Item1>
@@ -90,6 +90,9 @@
           </Rows>
           <StylePriority Ref="44" UseFont="false" UseBorders="false" UseTextAlignment="false" />
         </Item2>
+        <Item3 Ref="45" ControlType="XRLabel" Name="label6" Text="Tháng:" SizeF="68.7499847,23" LocationFloat="258.9583, 10.0000067" Font="Times New Roman, 14pt, style=Bold" Padding="2,2,0,0,96">
+          <StylePriority Ref="46" UseFont="false" />
+        </Item3>
       </Controls>
     </Item6>
   </Bands>

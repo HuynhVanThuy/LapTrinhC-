@@ -30,50 +30,118 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConTKTuThienThang));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThongKe = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTungNgay = new DevExpress.XtraEditors.SimpleButton();
+            this.btnMoiNgay = new DevExpress.XtraEditors.SimpleButton();
+            this.btnMotThang = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNhieuThang = new DevExpress.XtraEditors.SimpleButton();
+            this.txtThang = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtNam = new DevExpress.XtraEditors.SpinEdit();
+            this.btnIn = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridTKTuThien = new DevExpress.XtraGrid.GridControl();
+            this.gridViewTKTuThien = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThang.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTKTuThien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTKTuThien)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.comboBoxEdit1);
-            this.panelControl1.Controls.Add(this.spinEdit1);
-            this.panelControl1.Controls.Add(this.simpleButton1);
-            this.panelControl1.Controls.Add(this.btnThongKe);
+            this.panelControl1.Controls.Add(this.btnHuyBo);
+            this.panelControl1.Controls.Add(this.btnTungNgay);
+            this.panelControl1.Controls.Add(this.btnMoiNgay);
+            this.panelControl1.Controls.Add(this.btnMotThang);
+            this.panelControl1.Controls.Add(this.btnNhieuThang);
+            this.panelControl1.Controls.Add(this.txtThang);
+            this.panelControl1.Controls.Add(this.txtNam);
+            this.panelControl1.Controls.Add(this.btnIn);
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1136, 118);
-            this.panelControl1.TabIndex = 5;
+            this.panelControl1.TabIndex = 7;
             // 
-            // comboBoxEdit1
+            // btnHuyBo
             // 
-            this.comboBoxEdit1.EditValue = "1";
-            this.comboBoxEdit1.Location = new System.Drawing.Point(168, 47);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.btnHuyBo.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyBo.Appearance.Options.UseFont = true;
+            this.btnHuyBo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyBo.ImageOptions.Image")));
+            this.btnHuyBo.Location = new System.Drawing.Point(955, 65);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.Size = new System.Drawing.Size(74, 28);
+            this.btnHuyBo.TabIndex = 23;
+            this.btnHuyBo.Text = "Hủy bỏ";
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
+            // 
+            // btnTungNgay
+            // 
+            this.btnTungNgay.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTungNgay.Appearance.Options.UseFont = true;
+            this.btnTungNgay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTungNgay.ImageOptions.Image")));
+            this.btnTungNgay.Location = new System.Drawing.Point(815, 65);
+            this.btnTungNgay.Name = "btnTungNgay";
+            this.btnTungNgay.Size = new System.Drawing.Size(94, 28);
+            this.btnTungNgay.TabIndex = 22;
+            this.btnTungNgay.Text = "Từng ngày";
+            this.btnTungNgay.Click += new System.EventHandler(this.btnTungNgay_Click);
+            // 
+            // btnMoiNgay
+            // 
+            this.btnMoiNgay.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoiNgay.Appearance.Options.UseFont = true;
+            this.btnMoiNgay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMoiNgay.ImageOptions.Image")));
+            this.btnMoiNgay.Location = new System.Drawing.Point(815, 23);
+            this.btnMoiNgay.Name = "btnMoiNgay";
+            this.btnMoiNgay.Size = new System.Drawing.Size(94, 28);
+            this.btnMoiNgay.TabIndex = 21;
+            this.btnMoiNgay.Text = "Toàn bộ";
+            this.btnMoiNgay.Click += new System.EventHandler(this.btnMoiNgay_Click);
+            // 
+            // btnMotThang
+            // 
+            this.btnMotThang.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMotThang.Appearance.Options.UseFont = true;
+            this.btnMotThang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMotThang.ImageOptions.Image")));
+            this.btnMotThang.Location = new System.Drawing.Point(659, 65);
+            this.btnMotThang.Name = "btnMotThang";
+            this.btnMotThang.Size = new System.Drawing.Size(149, 28);
+            this.btnMotThang.TabIndex = 20;
+            this.btnMotThang.Text = "THEO MỘT THÁNG";
+            this.btnMotThang.Click += new System.EventHandler(this.btnMotThang_Click);
+            // 
+            // btnNhieuThang
+            // 
+            this.btnNhieuThang.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhieuThang.Appearance.Options.UseFont = true;
+            this.btnNhieuThang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhieuThang.ImageOptions.Image")));
+            this.btnNhieuThang.Location = new System.Drawing.Point(659, 23);
+            this.btnNhieuThang.Name = "btnNhieuThang";
+            this.btnNhieuThang.Size = new System.Drawing.Size(149, 28);
+            this.btnNhieuThang.TabIndex = 19;
+            this.btnNhieuThang.Text = "THEO TỪNG THÁNG";
+            this.btnNhieuThang.Click += new System.EventHandler(this.btnNhieuThang_Click);
+            // 
+            // txtThang
+            // 
+            this.txtThang.EditValue = "1";
+            this.txtThang.Location = new System.Drawing.Point(168, 47);
+            this.txtThang.Name = "txtThang";
+            this.txtThang.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThang.Properties.Appearance.Options.UseFont = true;
+            this.txtThang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.DropDownRows = 12;
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            this.txtThang.Properties.DropDownRows = 12;
+            this.txtThang.Properties.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -86,50 +154,40 @@
             "10",
             "11",
             "12"});
-            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(154, 30);
-            this.comboBoxEdit1.TabIndex = 18;
+            this.txtThang.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtThang.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtThang.Size = new System.Drawing.Size(154, 30);
+            this.txtThang.TabIndex = 18;
             // 
-            // spinEdit1
+            // txtNam
             // 
-            this.spinEdit1.EditValue = new decimal(new int[] {
+            this.txtNam.EditValue = new decimal(new int[] {
             2018,
             0,
             0,
             0});
-            this.spinEdit1.Location = new System.Drawing.Point(481, 47);
-            this.spinEdit1.Name = "spinEdit1";
-            this.spinEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spinEdit1.Properties.Appearance.Options.UseFont = true;
-            this.spinEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtNam.Location = new System.Drawing.Point(481, 47);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNam.Properties.Appearance.Options.UseFont = true;
+            this.txtNam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinEdit1.Properties.IsFloatValue = false;
-            this.spinEdit1.Properties.Mask.EditMask = "d";
-            this.spinEdit1.Size = new System.Drawing.Size(154, 30);
-            this.spinEdit1.TabIndex = 17;
+            this.txtNam.Properties.IsFloatValue = false;
+            this.txtNam.Properties.Mask.EditMask = "d";
+            this.txtNam.Size = new System.Drawing.Size(154, 30);
+            this.txtNam.TabIndex = 17;
             // 
-            // simpleButton1
+            // btnIn
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(863, 31);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(161, 64);
-            this.simpleButton1.TabIndex = 15;
-            this.simpleButton1.Text = "IN KẾT QUẢ";
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.Appearance.Options.UseFont = true;
-            this.btnThongKe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.ImageOptions.Image")));
-            this.btnThongKe.Location = new System.Drawing.Point(680, 31);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(161, 64);
-            this.btnThongKe.TabIndex = 14;
-            this.btnThongKe.Text = "LỌC KẾT QUẢ";
+            this.btnIn.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Appearance.Options.UseFont = true;
+            this.btnIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.ImageOptions.Image")));
+            this.btnIn.Location = new System.Drawing.Point(915, 23);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(142, 36);
+            this.btnIn.TabIndex = 15;
+            this.btnIn.Text = "IN KẾT QUẢ";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // label2
             // 
@@ -155,30 +213,30 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.gridControl1);
+            this.groupControl1.Controls.Add(this.gridTKTuThien);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 118);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1136, 381);
-            this.groupControl1.TabIndex = 4;
+            this.groupControl1.TabIndex = 6;
             this.groupControl1.Text = "Kết quả thống kê";
             // 
-            // gridControl1
+            // gridTKTuThien
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 20);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1132, 359);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridTKTuThien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridTKTuThien.Location = new System.Drawing.Point(2, 20);
+            this.gridTKTuThien.MainView = this.gridViewTKTuThien;
+            this.gridTKTuThien.Name = "gridTKTuThien";
+            this.gridTKTuThien.Size = new System.Drawing.Size(1132, 359);
+            this.gridTKTuThien.TabIndex = 0;
+            this.gridTKTuThien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewTKTuThien});
             // 
-            // gridView1
+            // gridViewTKTuThien
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridViewTKTuThien.GridControl = this.gridTKTuThien;
+            this.gridViewTKTuThien.Name = "gridViewTKTuThien";
+            this.gridViewTKTuThien.OptionsView.ShowGroupPanel = false;
             // 
             // ConTKTuThienThang
             // 
@@ -189,15 +247,16 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "ConTKTuThienThang";
             this.Text = "Từ thiện tháng";
+            this.Load += new System.EventHandler(this.ConTKTuThienThang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThang.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTKTuThien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTKTuThien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,14 +264,19 @@
         #endregion
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private DevExpress.XtraEditors.SpinEdit spinEdit1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton btnThongKe;
+        private DevExpress.XtraEditors.SimpleButton btnHuyBo;
+        private DevExpress.XtraEditors.SimpleButton btnTungNgay;
+        private DevExpress.XtraEditors.SimpleButton btnMoiNgay;
+        private DevExpress.XtraEditors.SimpleButton btnMotThang;
+        private DevExpress.XtraEditors.SimpleButton btnNhieuThang;
+        private DevExpress.XtraEditors.ComboBoxEdit txtThang;
+        private DevExpress.XtraEditors.SpinEdit txtNam;
+        private DevExpress.XtraEditors.SimpleButton btnIn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridTKTuThien;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewTKTuThien;
+
     }
 }

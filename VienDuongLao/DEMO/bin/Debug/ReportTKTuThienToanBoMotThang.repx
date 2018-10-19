@@ -65,31 +65,25 @@
         </Item3>
       </Controls>
     </Item5>
-    <Item6 Ref="32" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="60.4999847">
+    <Item6 Ref="32" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="25">
       <GroupFields>
-        <Item1 Ref="33" FieldName="ngaytaotochuc" />
+        <Item1 Ref="33" FieldName="thang" />
       </GroupFields>
       <Controls>
-        <Item1 Ref="34" ControlType="XRLabel" Name="label5" Text="label5" TextAlignment="TopCenter" SizeF="650,23" LocationFloat="1.58945713E-05, 12.5" Font="Times New Roman, 16pt, style=Bold" Padding="2,2,0,0,96">
-          <DataBindings>
-            <Item1 Ref="35" FormatString="{0:dd MMMM yyyy}" PropertyName="Text" DataMember="ngaytaotochuc" />
-          </DataBindings>
-          <StylePriority Ref="36" UseFont="false" UseTextAlignment="false" />
-        </Item1>
-        <Item2 Ref="37" ControlType="XRTable" Name="table2" TextAlignment="TopCenter" SizeF="650.000244,25" LocationFloat="1.58945713E-05, 35.4999847" Font="Times New Roman, 14pt, style=Bold" Borders="All">
+        <Item1 Ref="34" ControlType="XRTable" Name="table2" TextAlignment="TopCenter" SizeF="650.000244,25" LocationFloat="0, 0" Font="Times New Roman, 14pt, style=Bold" Borders="All">
           <Rows>
-            <Item1 Ref="38" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+            <Item1 Ref="35" ControlType="XRTableRow" Name="tableRow2" Weight="1">
               <Cells>
-                <Item1 Ref="39" ControlType="XRTableCell" Name="tableCell6" Weight="0.22499994718110034" Text="Mã" />
-                <Item2 Ref="40" ControlType="XRTableCell" Name="tableCell7" Weight="0.80192295277613024" Text="Người đại diện" />
-                <Item3 Ref="41" ControlType="XRTableCell" Name="tableCell9" Weight="0.77307724089312979" Text="Tên tổ chức" />
-                <Item4 Ref="42" ControlType="XRTableCell" Name="tableCell10" Weight="0.7346155874639958" Text="Liên hệ" />
-                <Item5 Ref="43" ControlType="XRTableCell" Name="tableCell8" Weight="0.4653852106880475" Text="Ngày đến" />
+                <Item1 Ref="36" ControlType="XRTableCell" Name="tableCell6" Weight="0.22499994718110034" Text="Mã" />
+                <Item2 Ref="37" ControlType="XRTableCell" Name="tableCell7" Weight="0.80192295277613024" Text="Người đại diện" />
+                <Item3 Ref="38" ControlType="XRTableCell" Name="tableCell9" Weight="0.77307724089312979" Text="Tên tổ chức" />
+                <Item4 Ref="39" ControlType="XRTableCell" Name="tableCell10" Weight="0.7346155874639958" Text="Liên hệ" />
+                <Item5 Ref="40" ControlType="XRTableCell" Name="tableCell8" Weight="0.4653852106880475" Text="Ngày đến" />
               </Cells>
             </Item1>
           </Rows>
-          <StylePriority Ref="44" UseFont="false" UseBorders="false" UseTextAlignment="false" />
-        </Item2>
+          <StylePriority Ref="41" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item1>
       </Controls>
     </Item6>
   </Bands>

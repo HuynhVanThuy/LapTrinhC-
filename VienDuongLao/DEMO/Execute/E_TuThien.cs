@@ -39,7 +39,7 @@ namespace DEMO.Execute
         public bool AddDataTCTuThien(String tentochuc ,String nguoidaidien ,String lienhe)
         {
             String ngaytao = DateTime.Now.ToShortDateString();
-            cmd.CommandText = string.Format("INSERT INTO [QuanLyDieuVien].[dbo].[ToChucTuThien] ([tentochuc] ,[nguoidaidien] ,[lienhe] ,[ngaytaotochuc]) VALUES (N'"+tentochuc+"' ,N'"+nguoidaidien+"',N'"+lienhe+"' ,'"+ngaytao+"')");
+            cmd.CommandText = string.Format("INSERT INTO [QuanLyDieuVien].[dbo].[ToChucTuThien] ([tentochuc] ,[nguoidaidien] ,[lienhe] ,[ngaytaotochuc]) VALUES (N'" + tentochuc + "' ,N'" + nguoidaidien + "',N'" + lienhe + "' ,CONVERT(date, '" + ngaytao + "', 103))");
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
@@ -106,6 +106,80 @@ namespace DEMO.Execute
         //||||||||||||||||||//
         //PHẦN XỬ LÝ TÌM KIẾM
         //||||||||||||||||||//
+
+
+        //||||||||||||||||||//
+        //PHẦN XỬ LÝ THỐNG KÊ
+        //||||||||||||||||||//
+
+        public DataTable TKTuThienToanBoNgay(String tungay, String denngay)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT * FROM ToChucTuThien WHERE ngaytaotochuc BETWEEN CONVERT(date, '" + tungay + "', 103) AND CONVERT(date, '" + denngay + "', 103)";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+
+        public DataTable TKTuThienToanBoThang(String nam)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT *, thang = MONTH(ngaytaotochuc) FROM ToChucTuThien WHERE YEAR(ngaytaotochuc) = '" + nam + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+
+        public DataTable TKTuThienToanThang(String thang,String nam)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT *, thang = MONTH(ngaytaotochuc) FROM ToChucTuThien WHERE MONTH(ngaytaotochuc) = '" + thang + "' AND YEAR(ngaytaotochuc) = '" + nam + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
         //Hết
 
     }
