@@ -87,6 +87,24 @@
     <Compile Include="View\ConDangKy.Designer.cs">
       <DependentUpon>ConDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ConTKChiTieuNam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConTKChiTieuNam.Designer.cs">
+      <DependentUpon>ConTKChiTieuNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConTKChiTieuNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConTKChiTieuNgay.Designer.cs">
+      <DependentUpon>ConTKChiTieuNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConTKChiTieuThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConTKChiTieuThang.Designer.cs">
+      <DependentUpon>ConTKChiTieuThang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ConTKNguoiNam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +298,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ConDangKy.resx">
       <DependentUpon>ConDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ConTKChiTieuNam.resx">
+      <DependentUpon>ConTKChiTieuNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ConTKChiTieuNgay.resx">
+      <DependentUpon>ConTKChiTieuNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ConTKChiTieuThang.resx">
+      <DependentUpon>ConTKChiTieuThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ConTKNguoiNam.resx">
       <DependentUpon>ConTKNguoiNam.cs</DependentUpon>

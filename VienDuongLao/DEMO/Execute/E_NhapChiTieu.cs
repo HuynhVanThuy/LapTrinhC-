@@ -136,7 +136,7 @@ namespace DEMO.Execute
         public bool AddDataNgayNhapChiTieu(String ngaychi)
         {
             String ngaytao = DateTime.Now.ToShortDateString();
-            cmd.CommandText = string.Format("INSERT INTO [QuanLyDieuVien].[dbo].[ChiTieu] ([ngaychi]) VALUES ('"+ngaychi+"')");
+            cmd.CommandText = string.Format("INSERT INTO [QuanLyDieuVien].[dbo].[ChiTieu] ([ngaychi]) VALUES (CONVERT(date, '" + ngaychi + "', 103))");
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
@@ -182,7 +182,7 @@ namespace DEMO.Execute
         //Cập nhật
         public bool UpdateDataNgayNhapChi(String id_chi, String ngaychi)
         {
-            cmd.CommandText = string.Format("UPDATE [QuanLyDieuVien].[dbo].[ChiTieu] SET [ngaychi] = '" + ngaychi + "' WHERE id_chi = '" + id_chi + "' ");
+            cmd.CommandText = string.Format("UPDATE [QuanLyDieuVien].[dbo].[ChiTieu] SET [ngaychi] = CONVERT(date, '" + ngaychi + "', 103) WHERE id_chi = '" + id_chi + "' ");
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
@@ -274,6 +274,144 @@ namespace DEMO.Execute
         //||||||||||||||||||//
         //PHẦN XỬ LÝ TÌM KIẾM
         //||||||||||||||||||//
+
+        //||||||||||||||||||//
+        //PHẦN XỬ LÝ THỐNG KÊ
+        //||||||||||||||||||//
+        public DataTable TKChiTieuToanBoNgay(String tungay, String denngay)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT ChiTieu.ngaychi, ChiTietChi.*, PhatTu.tenphattu FROM ChiTietChi INNER JOIN ChiTieu ON ChiTietChi.id_chi = ChiTieu.id_chi INNER JOIN PhatTu ON ChiTietChi.id_phattu = PhatTu.id_phattu WHERE ChiTieu.ngaychi BETWEEN CONVERT(date, '" + tungay + "', 103) AND CONVERT(date, '" + denngay + "', 103)";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+        //Thống kê theo tháng
+        public DataTable TKChiTieuToanBoThang(String nam)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT ChiTieu.ngaychi, ChiTietChi.*, PhatTu.tenphattu, thang = MONTH(ChiTieu.ngaychi)  FROM ChiTietChi INNER JOIN ChiTieu ON ChiTietChi.id_chi = ChiTieu.id_chi INNER JOIN PhatTu ON ChiTietChi.id_phattu = PhatTu.id_phattu WHERE YEAR(ChiTieu.ngaychi) = '" + nam + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+        public DataTable TKChiTieuToanThang(String thang, String nam)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT ChiTieu.ngaychi, ChiTietChi.*, PhatTu.tenphattu FROM ChiTietChi INNER JOIN ChiTieu ON ChiTietChi.id_chi = ChiTieu.id_chi INNER JOIN PhatTu ON ChiTietChi.id_phattu = PhatTu.id_phattu WHERE MONTH(ChiTieu.ngaychi) = '" + thang + "' AND YEAR(ChiTieu.ngaychi) = '" + nam + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+        //Thống kê năm
+        public DataTable TKPhatTuTatCaNamToanBo()
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT ChiTieu.ngaychi, ChiTietChi.*, PhatTu.tenphattu, nam = YEAR(ChiTieu.ngaychi) FROM ChiTietChi INNER JOIN ChiTieu ON ChiTietChi.id_chi = ChiTieu.id_chi INNER JOIN PhatTu ON ChiTietChi.id_phattu = PhatTu.id_phattu";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+
+        public DataTable TKPhatTuTungNamTheoThang(String tunam)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT ChiTieu.ngaychi, ChiTietChi.*, PhatTu.tenphattu, thang = MONTH(ChiTieu.ngaychi) FROM ChiTietChi INNER JOIN ChiTieu ON ChiTietChi.id_chi = ChiTieu.id_chi INNER JOIN PhatTu ON ChiTietChi.id_phattu = PhatTu.id_phattu WHERE YEAR(ChiTieu.ngaychi) = '" + tunam + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+
+        public DataTable TKPhatTuTungNam(String tunam, String dennam)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT ChiTieu.ngaychi, ChiTietChi.*, PhatTu.tenphattu, nam = YEAR(ChiTieu.ngaychi) FROM ChiTietChi INNER JOIN ChiTieu ON ChiTietChi.id_chi = ChiTieu.id_chi INNER JOIN PhatTu ON ChiTietChi.id_phattu = PhatTu.id_phattu WHERE YEAR(ChiTieu.ngaychi) BETWEEN '" + tunam + "' AND '" + dennam + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
         //Hết
     }
 }

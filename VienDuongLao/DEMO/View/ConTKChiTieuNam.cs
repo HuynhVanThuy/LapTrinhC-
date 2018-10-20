@@ -7,26 +7,26 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DEMO.Execute;
 using DevExpress.XtraReports.UI;
+using DEMO.Execute;
 
 namespace DEMO.View
 {
-    public partial class ConTKTuThienNam : DevExpress.XtraEditors.XtraForm
+    public partial class ConTKChiTieuNam : DevExpress.XtraEditors.XtraForm
     {
-        public ConTKTuThienNam()
+        public ConTKChiTieuNam()
         {
             InitializeComponent();
         }
-        E_TuThien tuthien = new E_TuThien();
-        String trangthai = "";
-        private void ConTKTuThienNam_Load(object sender, EventArgs e)
+
+        private void ConTKChiTieuNam_Load(object sender, EventArgs e)
         {
             btnNamToanBo.Enabled = btnNamTungNhom.Enabled = btnInKetQua.Enabled = false;
             btnTatCaNam.Enabled = btnTungNam.Enabled = true;
             trangthai = "";
         }
-
+        E_NhapChiTieu phattu = new E_NhapChiTieu();
+        String trangthai = "";
         private void btnTatCaNam_Click(object sender, EventArgs e)
         {
             btnTungNam.Enabled = false;
@@ -48,28 +48,12 @@ namespace DEMO.View
             if (trangthai.Equals("tatcanam"))
             {
                 trangthai = "toanbotatcanam";
-                gridTKTuThien.DataSource = tuthien.TKTuThienTatCaNamToanBo();
+                gridTKChiTieu.DataSource = phattu.TKPhatTuTatCaNamToanBo();
             }
             if (trangthai.Equals("tungnam"))
             {
                 trangthai = "toanbotungnam";
-                gridTKTuThien.DataSource = tuthien.TKTuThienTungNam(txtTuNam.Text.Trim(), txtDenNam.Text.Trim());
-            }
-        }
-
-        private void btnNamTungNhom_Click(object sender, EventArgs e)
-        {
-            btnInKetQua.Enabled = true;
-            btnNamToanBo.Enabled = false;
-            if (trangthai.Equals("tatcanam"))
-            {
-                trangthai = "chianhomtatcanam";
-                gridTKTuThien.DataSource = tuthien.TKTuThienTatCaNamToanBo();
-            }
-            if (trangthai.Equals("tungnam"))
-            {
-                trangthai = "chianhomtungnam";
-                gridTKTuThien.DataSource = tuthien.TKTuThienTungNam(txtTuNam.Text.Trim(), txtDenNam.Text.Trim());
+                gridTKChiTieu.DataSource = phattu.TKPhatTuTungNam(txtTuNam.Text.Trim(), txtDenNam.Text.Trim());
             }
         }
 
@@ -77,11 +61,11 @@ namespace DEMO.View
         {
             if (trangthai.Equals("toanbotatcanam"))
             {
-                if (gridViewTKTuThien.RowCount > 0)
+                if (gridViewTKChiTieu.RowCount > 0)
                 {
                     XtraReport rp = new XtraReport();
-                    rp.DataSource = gridTKTuThien.DataSource;
-                    rp.LoadLayout(Application.StartupPath + @"\ReportTuThienToanBoNam.repx");
+                    rp.DataSource = gridTKChiTieu.DataSource; 
+                    rp.LoadLayout(Application.StartupPath + @"\ReportChiTieuToanBoNam.repx");
                     rp.ShowDesignerDialog();
                     rp.ShowPreviewDialog();
                 }
@@ -92,11 +76,11 @@ namespace DEMO.View
             }
             if (trangthai.Equals("chianhomtatcanam"))
             {
-                if (gridViewTKTuThien.RowCount > 0)
+                if (gridViewTKChiTieu.RowCount > 0)
                 {
                     XtraReport rp = new XtraReport();
-                    rp.DataSource = gridTKTuThien.DataSource;
-                    rp.LoadLayout(Application.StartupPath + @"\ReportTuThienToanBoNamTheoNhom.repx");
+                    rp.DataSource = gridTKChiTieu.DataSource; 
+                    rp.LoadLayout(Application.StartupPath + @"\ReportChiTieuToanBoNamTheoNhom.repx");
                     //rp.ShowDesignerDialog();
                     rp.ShowPreviewDialog();
                 }
@@ -107,12 +91,12 @@ namespace DEMO.View
             }
             if (trangthai.Equals("toanbotungnam"))
             {
-                if (gridViewTKTuThien.RowCount > 0)
+                if (gridViewTKChiTieu.RowCount > 0)
                 {
                     XtraReport rp = new XtraReport();
-                    rp.DataSource = gridTKTuThien.DataSource;
-                    rp.LoadLayout(Application.StartupPath + @"\ReportTuThienToanBoTungNam.repx");
-                    //rp.ShowDesignerDialog();
+                    rp.DataSource = gridTKChiTieu.DataSource; 
+                    rp.LoadLayout(Application.StartupPath + @"\ReportChiTieuToanBoTungNam.repx");
+                    rp.ShowDesignerDialog();
                     rp.ShowPreviewDialog();
                 }
                 else
@@ -122,22 +106,22 @@ namespace DEMO.View
             }
             if (trangthai.Equals("chianhomtungnam"))
             {
-                if (gridViewTKTuThien.RowCount > 0)
+                if (gridViewTKChiTieu.RowCount > 0)
                 {
                     if (txtTuNam.Text.Equals(txtDenNam.Text))
                     {
                         XtraReport rp = new XtraReport();
-                        rp.DataSource = tuthien.TKTuThienTungNamTheoThang(txtTuNam.Text.Trim());
-                        rp.LoadLayout(Application.StartupPath + @"\ReportTuThienMotNamTheoThang.repx");
-                        //rp.ShowDesignerDialog();
+                        rp.DataSource = phattu.TKPhatTuTungNamTheoThang(txtTuNam.Text.Trim()); 
+                        rp.LoadLayout(Application.StartupPath + @"\ReportChiTieuMotNamTheoThang.repx");
+                        rp.ShowDesignerDialog();
                         rp.ShowPreviewDialog();
                     }
                     else
                     {
                         XtraReport rp = new XtraReport();
-                        rp.DataSource = gridTKTuThien.DataSource;
-                        rp.LoadLayout(Application.StartupPath + @"\ReportTuThienTungNamTheoNhom.repx");
-                        //rp.ShowDesignerDialog();
+                        rp.DataSource = gridTKChiTieu.DataSource; 
+                        rp.LoadLayout(Application.StartupPath + @"\ReportChiTieuTungNamTheoNhom.repx");
+                        rp.ShowDesignerDialog();
                         rp.ShowPreviewDialog();
                     }
                 }
@@ -146,11 +130,28 @@ namespace DEMO.View
                     XtraMessageBox.Show("Không có dữ liệu để thống kê!");
                 }
             }
+            ConTKChiTieuNam_Load(sender, e);
+        }
+
+        private void btnNamTungNhom_Click(object sender, EventArgs e)
+        {
+            btnInKetQua.Enabled = true;
+            btnNamToanBo.Enabled = false;
+            if (trangthai.Equals("tatcanam"))
+            {
+                trangthai = "chianhomtatcanam";
+                gridTKChiTieu.DataSource = phattu.TKPhatTuTatCaNamToanBo();
+            }
+            if (trangthai.Equals("tungnam"))
+            {
+                trangthai = "chianhomtungnam";
+                gridTKChiTieu.DataSource = phattu.TKPhatTuTungNam(txtTuNam.Text.Trim(), txtDenNam.Text.Trim());
+            }
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
-            ConTKTuThienNam_Load(sender, e);
+            ConTKChiTieuNam_Load(sender, e);
         }
     }
 }

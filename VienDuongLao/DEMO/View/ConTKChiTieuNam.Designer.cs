@@ -1,6 +1,6 @@
 ﻿namespace DEMO.View
 {
-    partial class ConTKTuThienNam
+    partial class ConTKChiTieuNam
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConTKTuThienNam));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConTKChiTieuNam));
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
             this.btnNamTungNhom = new DevExpress.XtraEditors.SimpleButton();
             this.btnNamToanBo = new DevExpress.XtraEditors.SimpleButton();
@@ -36,22 +37,39 @@
             this.btnTatCaNam = new DevExpress.XtraEditors.SimpleButton();
             this.txtDenNam = new DevExpress.XtraEditors.SpinEdit();
             this.label2 = new System.Windows.Forms.Label();
-            this.gridTKTuThien = new DevExpress.XtraGrid.GridControl();
-            this.gridViewTKTuThien = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtTuNam = new DevExpress.XtraEditors.SpinEdit();
             this.btnInKetQua = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
+            this.gridViewTKChiTieu = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridTKChiTieu = new DevExpress.XtraGrid.GridControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDenNam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTKTuThien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewTKTuThien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTuNam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDenNam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTuNam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTKChiTieu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTKChiTieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.btnHuyBo);
+            this.panelControl1.Controls.Add(this.btnNamTungNhom);
+            this.panelControl1.Controls.Add(this.btnNamToanBo);
+            this.panelControl1.Controls.Add(this.btnTungNam);
+            this.panelControl1.Controls.Add(this.btnTatCaNam);
+            this.panelControl1.Controls.Add(this.txtDenNam);
+            this.panelControl1.Controls.Add(this.label2);
+            this.panelControl1.Controls.Add(this.txtTuNam);
+            this.panelControl1.Controls.Add(this.btnInKetQua);
+            this.panelControl1.Controls.Add(this.label1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1136, 116);
+            this.panelControl1.TabIndex = 9;
             // 
             // btnHuyBo
             // 
@@ -142,23 +160,6 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Đến năm";
             // 
-            // gridTKTuThien
-            // 
-            this.gridTKTuThien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridTKTuThien.Location = new System.Drawing.Point(2, 20);
-            this.gridTKTuThien.MainView = this.gridViewTKTuThien;
-            this.gridTKTuThien.Name = "gridTKTuThien";
-            this.gridTKTuThien.Size = new System.Drawing.Size(1132, 359);
-            this.gridTKTuThien.TabIndex = 0;
-            this.gridTKTuThien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewTKTuThien});
-            // 
-            // gridViewTKTuThien
-            // 
-            this.gridViewTKTuThien.GridControl = this.gridTKTuThien;
-            this.gridViewTKTuThien.Name = "gridViewTKTuThien";
-            this.gridViewTKTuThien.OptionsView.ShowGroupPanel = false;
-            // 
             // txtTuNam
             // 
             this.txtTuNam.EditValue = new decimal(new int[] {
@@ -189,24 +190,6 @@
             this.btnInKetQua.Text = "IN KẾT QUẢ";
             this.btnInKetQua.Click += new System.EventHandler(this.btnInKetQua_Click);
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.btnHuyBo);
-            this.panelControl1.Controls.Add(this.btnNamTungNhom);
-            this.panelControl1.Controls.Add(this.btnNamToanBo);
-            this.panelControl1.Controls.Add(this.btnTungNam);
-            this.panelControl1.Controls.Add(this.btnTatCaNam);
-            this.panelControl1.Controls.Add(this.txtDenNam);
-            this.panelControl1.Controls.Add(this.label2);
-            this.panelControl1.Controls.Add(this.txtTuNam);
-            this.panelControl1.Controls.Add(this.btnInKetQua);
-            this.panelControl1.Controls.Add(this.label1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1136, 116);
-            this.panelControl1.TabIndex = 7;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -218,35 +201,52 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Từ năm";
             // 
+            // gridViewTKChiTieu
+            // 
+            this.gridViewTKChiTieu.GridControl = this.gridTKChiTieu;
+            this.gridViewTKChiTieu.Name = "gridViewTKChiTieu";
+            this.gridViewTKChiTieu.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridTKChiTieu
+            // 
+            this.gridTKChiTieu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridTKChiTieu.Location = new System.Drawing.Point(2, 20);
+            this.gridTKChiTieu.MainView = this.gridViewTKChiTieu;
+            this.gridTKChiTieu.Name = "gridTKChiTieu";
+            this.gridTKChiTieu.Size = new System.Drawing.Size(1132, 359);
+            this.gridTKChiTieu.TabIndex = 0;
+            this.gridTKChiTieu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewTKChiTieu});
+            // 
             // groupControl1
             // 
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl1.Controls.Add(this.gridTKTuThien);
+            this.groupControl1.Controls.Add(this.gridTKChiTieu);
             this.groupControl1.Location = new System.Drawing.Point(0, 118);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1136, 381);
-            this.groupControl1.TabIndex = 6;
+            this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "Kết quả thống kê";
             // 
-            // ConTKTuThienNam
+            // ConTKChiTieuNam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1136, 499);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.groupControl1);
-            this.Name = "ConTKTuThienNam";
-            this.Text = "Từ thiện năm";
-            this.Load += new System.EventHandler(this.ConTKTuThienNam_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtDenNam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTKTuThien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewTKTuThien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTuNam.Properties)).EndInit();
+            this.Name = "ConTKChiTieuNam";
+            this.Text = "Chi tiêu năm";
+            this.Load += new System.EventHandler(this.ConTKChiTieuNam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDenNam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTuNam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTKChiTieu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTKChiTieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -255,6 +255,7 @@
 
         #endregion
 
+        private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnHuyBo;
         private DevExpress.XtraEditors.SimpleButton btnNamTungNhom;
         private DevExpress.XtraEditors.SimpleButton btnNamToanBo;
@@ -262,13 +263,11 @@
         private DevExpress.XtraEditors.SimpleButton btnTatCaNam;
         private DevExpress.XtraEditors.SpinEdit txtDenNam;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraGrid.GridControl gridTKTuThien;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewTKTuThien;
         private DevExpress.XtraEditors.SpinEdit txtTuNam;
         private DevExpress.XtraEditors.SimpleButton btnInKetQua;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewTKChiTieu;
+        private DevExpress.XtraGrid.GridControl gridTKChiTieu;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-
     }
 }

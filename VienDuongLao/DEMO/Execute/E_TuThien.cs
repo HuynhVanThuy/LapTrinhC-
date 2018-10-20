@@ -36,7 +36,7 @@ namespace DEMO.Execute
             return dt;
         }
         //Thêm mới
-        public bool AddDataTCTuThien(String tentochuc ,String nguoidaidien ,String lienhe)
+        public bool AddDataTCTuThien(String tentochuc, String nguoidaidien, String lienhe)
         {
             String ngaytao = DateTime.Now.ToShortDateString();
             cmd.CommandText = string.Format("INSERT INTO [QuanLyDieuVien].[dbo].[ToChucTuThien] ([tentochuc] ,[nguoidaidien] ,[lienhe] ,[ngaytaotochuc]) VALUES (N'" + tentochuc + "' ,N'" + nguoidaidien + "',N'" + lienhe + "' ,CONVERT(date, '" + ngaytao + "', 103))");
@@ -61,7 +61,7 @@ namespace DEMO.Execute
         //Cập nhật 
         public bool UpdateDataTCTuThien(String id_tochuc, String tentochuc, String nguoidaidien, String lienhe)
         {
-            cmd.CommandText = string.Format("UPDATE [QuanLyDieuVien].[dbo].[ToChucTuThien] SET [tentochuc] = N'"+tentochuc+"' ,[nguoidaidien] = N'"+nguoidaidien+"' ,[lienhe] = N'"+lienhe+"' WHERE id_tochuc = '"+id_tochuc+"' ");
+            cmd.CommandText = string.Format("UPDATE [QuanLyDieuVien].[dbo].[ToChucTuThien] SET [tentochuc] = N'" + tentochuc + "' ,[nguoidaidien] = N'" + nguoidaidien + "' ,[lienhe] = N'" + lienhe + "' WHERE id_tochuc = '" + id_tochuc + "' ");
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
@@ -158,13 +158,79 @@ namespace DEMO.Execute
             return dt;
         }
 
-        public DataTable TKTuThienToanThang(String thang,String nam)
+        public DataTable TKTuThienToanThang(String thang, String nam)
         {
             DataTable dt = new DataTable();
             cmd.CommandText = "SELECT *, thang = MONTH(ngaytaotochuc) FROM ToChucTuThien WHERE MONTH(ngaytaotochuc) = '" + thang + "' AND YEAR(ngaytaotochuc) = '" + nam + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+
+        public DataTable TKTuThienTatCaNamToanBo()
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT *, nam = YEAR(ngaytaotochuc) FROM ToChucTuThien";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+
+        public DataTable TKTuThienTungNamTheoThang(String tunam)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT *, thang = MONTH(ngaytaotochuc) FROM ToChucTuThien WHERE YEAR(ngaytaotochuc) = '" + tunam + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+
+        public DataTable TKTuThienTungNam(String tunam, String dennam)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT *, nam = YEAR(ngaytaotochuc) FROM ToChucTuThien WHERE YEAR(ngaytaotochuc) BETWEEN '" + tunam + "' AND '" + dennam + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
             try
             {
                 con.openCon();

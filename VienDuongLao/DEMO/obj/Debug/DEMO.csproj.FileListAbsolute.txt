@@ -67,3 +67,6 @@ C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Deb
 C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConChiTietPhong.resources
 C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConXemTaiKhoan.resources
 C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConDangKy.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConTKChiTieuNam.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConTKChiTieuNgay.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConTKChiTieuThang.resources
