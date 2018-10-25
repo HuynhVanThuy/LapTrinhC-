@@ -695,7 +695,7 @@
             // 
             // btnInPhongO
             // 
-            this.btnInPhongO.Caption = "Phòng ở phòng";
+            this.btnInPhongO.Caption = "Người ở phòng";
             this.btnInPhongO.Id = 58;
             this.btnInPhongO.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInPhongO.ImageOptions.Image")));
             this.btnInPhongO.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnInPhongO.ImageOptions.LargeImage")));
