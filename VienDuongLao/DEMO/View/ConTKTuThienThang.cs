@@ -94,8 +94,8 @@ namespace DEMO.View
                 if (gridViewTKTuThien.RowCount > 0)
                 {
                     XtraReport rp = new XtraReport();
-                    rp.DataSource = gridTKTuThien.DataSource;
-                    rp.LoadLayout(Application.StartupPath + @"\ReportTKPhatTuTungNgayMotThang.repx");
+                    rp.DataSource = gridTKTuThien.DataSource; 
+                    rp.LoadLayout(Application.StartupPath + @"\ReportTKTuThienTungNgayMotThang.repx");
                     //rp.ShowDesignerDialog();
                     rp.ShowPreviewDialog();
                 }

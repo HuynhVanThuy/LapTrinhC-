@@ -5,6 +5,7 @@ using System.Text;
 using DEMO.Model;
 using System.Data.SqlClient;
 using System.Data;
+using DevExpress.XtraEditors;
 
 namespace DEMO.Execute
 {
@@ -136,7 +137,7 @@ namespace DEMO.Execute
         public DataTable TKPhatTuToanBoThang(String nam)
         {
             DataTable dt = new DataTable();
-            cmd.CommandText = "SELECT * FROM PhatTu WHERE YEAR(ngaytaophattu) = '"+nam+"'";
+            cmd.CommandText = "SELECT *, thang = MONTH(ngaytaophattu) FROM PhatTu WHERE YEAR(ngaytaophattu) = '" + nam + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
@@ -227,6 +228,52 @@ namespace DEMO.Execute
         {
             DataTable dt = new DataTable();
             cmd.CommandText = "SELECT *, nam = YEAR(ngaytaophattu) FROM PhatTu WHERE YEAR(ngaytaophattu) BETWEEN '"+tunam+"' AND '"+dennam+"'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+        //||||||||||||||||||//
+        //  PHẦN XỬ LÝ IN ẤN
+        //||||||||||||||||||//
+        int nam = DateTime.Now.Year;
+        public DataTable InPhatTuTheoTuoi(String tuoi, String trangthai)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT * FROM PhatTu WHERE " + nam + "- YEAR(ngaytaophattu) " + trangthai + " " + tuoi + " "; 
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+        public DataTable InPhatTuTheoChucDanh(String chucdanh)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT * FROM PhatTu WHERE chucdanh = N'" + chucdanh + "' "; 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try

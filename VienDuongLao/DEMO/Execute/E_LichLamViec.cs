@@ -263,6 +263,56 @@ namespace DEMO.Execute
         //||||||||||||||||||//
         //PHẦN XỬ LÝ TÌM KIẾM
         //||||||||||||||||||//
+
+        //||||||||||||||||||//
+        //  PHẦN XỬ LÝ IN ẤN
+        //||||||||||||||||||//
+        //lấy mã phật tử
+        public DataTable InToanBoLich()
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT BuoiLamViec.*, PhatTu.tenphattu FROM BuoiLamViec INNER JOIN LichLamViec ON BuoiLamViec.id_viec = LichLamViec.id_viec INNER JOIN PhatTu ON BuoiLamViec.id_phattu = PhatTu.id_phattu";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+        public DataTable InLichTheoBuoi(String trangthai)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT BuoiLamViec.*, PhatTu.tenphattu FROM BuoiLamViec INNER JOIN LichLamViec ON BuoiLamViec.id_viec = LichLamViec.id_viec INNER JOIN PhatTu ON BuoiLamViec.id_phattu = PhatTu.id_phattu WHERE BuoiLamViec.tenbuoi = N'"+trangthai+"'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+        
         //Hết
     }
 }

@@ -82,7 +82,7 @@ namespace DEMO.View
                     XtraReport rp = new XtraReport();
                     rp.DataSource = gridTKTuThien.DataSource;
                     rp.LoadLayout(Application.StartupPath + @"\ReportTuThienToanBoNam.repx");
-                    rp.ShowDesignerDialog();
+                    //rp.ShowDesignerDialog();
                     rp.ShowPreviewDialog();
                 }
                 else
@@ -146,6 +146,7 @@ namespace DEMO.View
                     XtraMessageBox.Show("Không có dữ liệu để thống kê!");
                 }
             }
+            ConTKTuThienNam_Load(sender, e);
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)

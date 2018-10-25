@@ -50,22 +50,36 @@ namespace DEMO.View
 
         private void btnInKetQua_Click(object sender, EventArgs e)
         {
-            if(trangthai.Equals("toanbo")){
-                XtraReport rp = new XtraReport();
-                rp.DataSource = gridTKPhatTu.DataSource;
-                //rp.LoadLayout(Application.StartupPath + @"\ReportMauPhatTu.repx");
-                rp.LoadLayout(Application.StartupPath + @"\ReportPhatTuTheoToanBoNgay.repx");
-                //rp.ShowDesignerDialog();
-                rp.ShowPreviewDialog();
+            if (trangthai.Equals("toanbo"))
+            {
+                if (gridViewTKPhatTu.RowCount > 0)
+                {
+                    XtraReport rp = new XtraReport();
+                    rp.DataSource = gridTKPhatTu.DataSource;
+                    //rp.LoadLayout(Application.StartupPath + @"\ReportMauPhatTu.repx");
+                    rp.LoadLayout(Application.StartupPath + @"\ReportPhatTuTheoToanBoNgay.repx");
+                    //rp.ShowDesignerDialog();
+                    rp.ShowPreviewDialog();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Không có dữ liệu thống kê!");
+                }
             }
             if (trangthai.Equals("tungngay"))
             {
-                XtraReport rp = new XtraReport();
-                rp.DataSource = gridTKPhatTu.DataSource;
-                //rp.LoadLayout(Application.StartupPath + @"\ReportMauPhatTu.repx");
-                rp.LoadLayout(Application.StartupPath + @"\ReportMauPhatTuTheoTungNgay.repx");
-                //rp.ShowDesignerDialog();
-                rp.ShowPreviewDialog();
+                if (gridViewTKPhatTu.RowCount > 0)
+                {
+                    XtraReport rp = new XtraReport();
+                    rp.DataSource = gridTKPhatTu.DataSource; 
+                    rp.LoadLayout(Application.StartupPath + @"\ReportPhatTuTheoTungNgay.repx");
+                    //rp.ShowDesignerDialog();
+                    rp.ShowPreviewDialog();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Không có dữ liệu thống kê!");
+                }
             }
             ConTKPhatTuNgay_Load(sender, e);
         }

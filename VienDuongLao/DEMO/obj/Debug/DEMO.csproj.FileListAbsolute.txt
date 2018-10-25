@@ -70,3 +70,13 @@ C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Deb
 C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConTKChiTieuNam.resources
 C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConTKChiTieuNgay.resources
 C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConTKChiTieuThang.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConTKTienTuThienNam.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConTKTienTuThienNgay.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.ConTKTienTuThienThang.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.InchiTieuHangNgay.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.InLichLamViec.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.InLichViengTham.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.InPhatTu.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.InPhongO.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.InTaiKhoan.resources
+C:\Users\VanThuy\Documents\Visual Studio 2010\Projects\VienDuongLao\DEMO\obj\Debug\DEMO.View.InTienTuThien.resources

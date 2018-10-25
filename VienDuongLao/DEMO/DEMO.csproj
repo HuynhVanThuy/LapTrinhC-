@@ -183,6 +183,24 @@
     <Compile Include="View\ConTKPhatTuThang.Designer.cs">
       <DependentUpon>ConTKPhatTuThang.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ConTKTienTuThienNam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConTKTienTuThienNam.Designer.cs">
+      <DependentUpon>ConTKTienTuThienNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConTKTienTuThienNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConTKTienTuThienNgay.Designer.cs">
+      <DependentUpon>ConTKTienTuThienNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConTKTienTuThienThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConTKTienTuThienThang.Designer.cs">
+      <DependentUpon>ConTKTienTuThienThang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ConTKTuThienNam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,11 +305,53 @@
     <Compile Include="View\FormPhanQuyen.Designer.cs">
       <DependentUpon>FormPhanQuyen.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\InchiTieuHangNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InchiTieuHangNgay.Designer.cs">
+      <DependentUpon>InchiTieuHangNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InLichLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InLichLamViec.Designer.cs">
+      <DependentUpon>InLichLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InLichViengTham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InLichViengTham.Designer.cs">
+      <DependentUpon>InLichViengTham.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\InNguoiDuocNuoiDuong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\InNguoiDuocNuoiDuong.Designer.cs">
       <DependentUpon>InNguoiDuocNuoiDuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InPhatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InPhatTu.Designer.cs">
+      <DependentUpon>InPhatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InPhongO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InPhongO.Designer.cs">
+      <DependentUpon>InPhongO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InTaiKhoan.Designer.cs">
+      <DependentUpon>InTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InTienTuThien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InTienTuThien.Designer.cs">
+      <DependentUpon>InTienTuThien.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\ConChiTietPhong.resx">
       <DependentUpon>ConChiTietPhong.cs</DependentUpon>
@@ -346,6 +406,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ConTKPhatTuThang.resx">
       <DependentUpon>ConTKPhatTuThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ConTKTienTuThienNam.resx">
+      <DependentUpon>ConTKTienTuThienNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ConTKTienTuThienNgay.resx">
+      <DependentUpon>ConTKTienTuThienNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ConTKTienTuThienThang.resx">
+      <DependentUpon>ConTKTienTuThienThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ConTkTuThienNam.resx">
       <DependentUpon>ConTKTuThienNam.cs</DependentUpon>
@@ -408,8 +477,29 @@
     <EmbeddedResource Include="View\FormPhanQuyen.resx">
       <DependentUpon>FormPhanQuyen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\InchiTieuHangNgay.resx">
+      <DependentUpon>InchiTieuHangNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InLichLamViec.resx">
+      <DependentUpon>InLichLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InLichViengTham.resx">
+      <DependentUpon>InLichViengTham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\InNguoiDuocNuoiDuong.resx">
       <DependentUpon>InNguoiDuocNuoiDuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InPhatTu.resx">
+      <DependentUpon>InPhatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InPhongO.resx">
+      <DependentUpon>InPhongO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InTaiKhoan.resx">
+      <DependentUpon>InTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InTienTuThien.resx">
+      <DependentUpon>InTienTuThien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

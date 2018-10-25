@@ -154,6 +154,7 @@ namespace DEMO.View
                     XtraMessageBox.Show("Không có dữ liệu để thống kê!");
                 }
             }
+            ConTKPhatTuNam_Load(sender, e);
         }
 
 

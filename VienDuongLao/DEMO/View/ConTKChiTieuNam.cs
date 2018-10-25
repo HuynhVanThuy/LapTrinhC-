@@ -66,7 +66,7 @@ namespace DEMO.View
                     XtraReport rp = new XtraReport();
                     rp.DataSource = gridTKChiTieu.DataSource; 
                     rp.LoadLayout(Application.StartupPath + @"\ReportChiTieuToanBoNam.repx");
-                    rp.ShowDesignerDialog();
+                    //rp.ShowDesignerDialog();
                     rp.ShowPreviewDialog();
                 }
                 else
@@ -96,7 +96,7 @@ namespace DEMO.View
                     XtraReport rp = new XtraReport();
                     rp.DataSource = gridTKChiTieu.DataSource; 
                     rp.LoadLayout(Application.StartupPath + @"\ReportChiTieuToanBoTungNam.repx");
-                    rp.ShowDesignerDialog();
+                    //rp.ShowDesignerDialog();
                     rp.ShowPreviewDialog();
                 }
                 else
@@ -111,17 +111,17 @@ namespace DEMO.View
                     if (txtTuNam.Text.Equals(txtDenNam.Text))
                     {
                         XtraReport rp = new XtraReport();
-                        rp.DataSource = phattu.TKPhatTuTungNamTheoThang(txtTuNam.Text.Trim()); 
+                        rp.DataSource = phattu.TKPhatTuTungNamTheoThang(txtTuNam.Text.Trim());
                         rp.LoadLayout(Application.StartupPath + @"\ReportChiTieuMotNamTheoThang.repx");
-                        rp.ShowDesignerDialog();
+                        //rp.ShowDesignerDialog();
                         rp.ShowPreviewDialog();
                     }
                     else
                     {
                         XtraReport rp = new XtraReport();
-                        rp.DataSource = gridTKChiTieu.DataSource; 
+                        rp.DataSource = gridTKChiTieu.DataSource;
                         rp.LoadLayout(Application.StartupPath + @"\ReportChiTieuTungNamTheoNhom.repx");
-                        rp.ShowDesignerDialog();
+                        //rp.ShowDesignerDialog();
                         rp.ShowPreviewDialog();
                     }
                 }

@@ -7,6 +7,8 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DEMO.Execute;
+using DevExpress.XtraReports.UI;
 
 namespace DEMO.View
 {
@@ -16,44 +18,96 @@ namespace DEMO.View
         {
             InitializeComponent();
         }
-
+        E_NguoiDuocNuoi nguoinuoi = new E_NguoiDuocNuoi();
+        String trangthai = "";
         private void InNguoiDuocNuoiDuong_Load(object sender, EventArgs e)
         {
             nhomTacVu.Enabled = false;
+            trangthai = "";
+        }
+
+        private void btnInToanBo_Click(object sender, EventArgs e)
+        {
+            gridNguoiDuocNuoi.DataSource = nguoinuoi.TKNguoiDuocNuoiToanBoNam();
+            if (gridViewNguoiDuocNuoi.RowCount > 0)
+            {
+                XtraReport rp = new XtraReport();
+                rp.DataSource = gridNguoiDuocNuoi.DataSource;
+                rp.LoadLayout(Application.StartupPath + @"\ReportInNguoiDuocNuoiToanBo.repx");
+                //rp.ShowDesignerDialog();
+                rp.ShowPreviewDialog();
+            }
+            else
+            {
+                XtraMessageBox.Show("Không có dữ liệu để thống kê!");
+            }
+            InNguoiDuocNuoiDuong_Load(sender, e);
         }
 
         private void btnInLoc_Click(object sender, EventArgs e)
-        {
-            nhomTacVu.Enabled = true;
-            btnInLoc.Enabled = btnInToanBo.Enabled = false;
-            txtDenNgay.Enabled = txtNam.Enabled = txtThang.Enabled = txtTuNgay.Enabled = false;
+        { 
+            txtTuoi.Enabled = btnIn.Enabled = false;
+            nhomTacVu.Enabled = txtTuoi.Enabled = true;
         }
 
-        private void btnQuayLai_Click(object sender, EventArgs e)
+        private void btnLonHon_Click(object sender, EventArgs e)
         {
-            btnInLoc.Enabled = btnInToanBo.Enabled = true;
-            nhomTacVu.Enabled = false;
+            trangthai = "<";
+            btnIn.Enabled = true;
+            if (!txtTuoi.Text.Equals(""))
+            {
+                gridNguoiDuocNuoi.DataSource = nguoinuoi.InNguoiDuocNuoiTuoiNhoHon(txtTuoi.Text.Trim(), trangthai);
+            }
+            else {
+                XtraMessageBox.Show("Bạn cần nhập tuổi!");
+            }
         }
 
-        private void btnNgay_Click(object sender, EventArgs e)
+        private void btnBangTuoi_Click(object sender, EventArgs e)
         {
-            txtNam.Enabled = false;
-            txtThang.Enabled = false;
-            txtTuNgay.Enabled = txtDenNgay.Enabled = true;
+            trangthai = "=";
+            btnIn.Enabled = true;
+            if (!txtTuoi.Text.Equals(""))
+            {
+                gridNguoiDuocNuoi.DataSource = nguoinuoi.InNguoiDuocNuoiTuoiNhoHon(txtTuoi.Text.Trim(), trangthai);
+            }
+            else
+            {
+                XtraMessageBox.Show("Bạn cần nhập tuổi!");
+            }
         }
 
-        private void btnThang_Click(object sender, EventArgs e)
+        private void btnNhoHon_Click(object sender, EventArgs e)
         {
-            txtThang.Enabled = true;
-            txtNam.Enabled = false;
-            txtTuNgay.Enabled = txtDenNgay.Enabled = false;
+            trangthai = ">";
+            btnIn.Enabled = true;
+            if (!txtTuoi.Text.Equals(""))
+            {
+                gridNguoiDuocNuoi.DataSource = nguoinuoi.InNguoiDuocNuoiTuoiNhoHon(txtTuoi.Text.Trim(), trangthai);
+            }
+            else
+            {
+                XtraMessageBox.Show("Bạn cần nhập tuổi!");
+            }
         }
 
-        private void btnNam_Click(object sender, EventArgs e)
+        private void btnIn_Click(object sender, EventArgs e)
         {
-            txtNam.Enabled = true;
-            txtThang.Enabled = false;
-            txtTuNgay.Enabled = txtDenNgay.Enabled = false;
-        }
+            if (gridViewNguoiDuocNuoi.RowCount > 0)
+            {
+                XtraReport rp = new XtraReport();
+                rp.DataSource = gridNguoiDuocNuoi.DataSource;
+
+                rp.LoadLayout(Application.StartupPath + @"\ReportInNguoiDuocNuoiTheoTuoi.repx");
+                //rp.ShowDesignerDialog();
+                rp.ShowPreviewDialog();
+            }
+            else
+            {
+                XtraMessageBox.Show("Không có dữ liệu để thống kê!");
+            }
+            InNguoiDuocNuoiDuong_Load(sender, e);
+        } 
+
     }
 }

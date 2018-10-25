@@ -58,7 +58,7 @@ namespace DEMO.View
             {
                 XtraReport rp = new XtraReport();
                 rp.DataSource = gridTKDoanTuThien.DataSource;
-                rp.LoadLayout(Application.StartupPath + @"\ReportMauPhatTuTheoTungNgay.repx");
+                rp.LoadLayout(Application.StartupPath + @"\ReportTCTuThienTheoTungNgay.repx");
                 //rp.ShowDesignerDialog();
                 rp.ShowPreviewDialog();
             }

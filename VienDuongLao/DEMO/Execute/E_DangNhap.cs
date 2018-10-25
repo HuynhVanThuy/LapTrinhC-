@@ -172,6 +172,51 @@ namespace DEMO.Execute
             return false;
         }
         
+        //In ấn tài khoản
+        public DataTable InTaiKhoan()
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT * FROM TaiKhoan ";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
 
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+
+        public DataTable InTaiKhoanTheoQuyen(String quyen)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT * FROM TaiKhoan WHERE quyen = '"+quyen+"'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
     }
 }

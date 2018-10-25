@@ -22,9 +22,9 @@ namespace DEMO
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            Application.Run(new FormMain());
+            //Application.Run(new FormMain());
             //Application.Run(new FormDangNhap());
-            //Application.Run(new FormHienThi());
+            Application.Run(new FormHienThi());
             //Application.Run(new FormPhanQuyen());
         }
     }

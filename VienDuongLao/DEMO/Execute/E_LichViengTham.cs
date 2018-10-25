@@ -244,6 +244,52 @@ namespace DEMO.Execute
         //||||||||||||||||||//
         //PHẦN XỬ LÝ TÌM KIẾM
         //||||||||||||||||||//
+        //||||||||||||||||||//
+        //PHẦN XỬ LÝ IN ẤN
+        //||||||||||||||||||//
+        public DataTable InToanBoLich()
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT BuoiViengTham.*, ToChucTuThien.tentochuc FROM BuoiViengTham INNER JOIN LichViengTham ON BuoiViengTham.id_viengtham = LichViengTham.id_viengtham INNER JOIN ToChucTuThien ON BuoiViengTham.id_tochuc = ToChucTuThien.id_tochuc";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+        public DataTable InLichTheoBuoi(String trangthai)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT BuoiViengTham.*, ToChucTuThien.tentochuc FROM BuoiViengTham INNER JOIN LichViengTham ON BuoiViengTham.id_viengtham = LichViengTham.id_viengtham INNER JOIN ToChucTuThien ON BuoiViengTham.id_tochuc = ToChucTuThien.id_tochuc WHERE BuoiViengTham.thoigian = N'"+trangthai+"'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
         //Hết
     }
 }

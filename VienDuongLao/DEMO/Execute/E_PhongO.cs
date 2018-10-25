@@ -107,6 +107,76 @@ namespace DEMO.Model
 
             return false;
         }
+        //||||||||||||||||||//
+        //  PHẦN XỬ LÝ IN ẤN
+        //||||||||||||||||||//
+        public DataTable InToanBoPhong()
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT ChiTietPhongO.id_chitietphong, PhongO.tenphong, PhongO.hienco,NguoiDuocNuoi.hoten, NguoiDuocNuoi.quequan, 2018-year(NguoiDuocNuoi.ngaysinh) AS Tuổi FROM ChiTietPhongO INNER JOIN NguoiDuocNuoi ON ChiTietPhongO.id_nguoinuoi = NguoiDuocNuoi.id_nguoinuoi INNER JOIN PhongO ON ChiTietPhongO.id_phongo = PhongO.id_phongo";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+        public DataTable InTheoTuoiPhong(String tuoi, String trangthai)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT ChiTietPhongO.id_chitietphong, PhongO.tenphong, PhongO.hienco,NguoiDuocNuoi.hoten, NguoiDuocNuoi.quequan, 2018-year(NguoiDuocNuoi.ngaysinh) AS Tuổi FROM ChiTietPhongO INNER JOIN NguoiDuocNuoi ON ChiTietPhongO.id_nguoinuoi = NguoiDuocNuoi.id_nguoinuoi INNER JOIN PhongO ON ChiTietPhongO.id_phongo = PhongO.id_phongo WHERE 2018-year(NguoiDuocNuoi.ngaysinh) "+trangthai+" "+tuoi+"";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+
+        public DataTable InTheoSoNguoiPhong(String songuoi)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT ChiTietPhongO.id_chitietphong, PhongO.tenphong, PhongO.hienco,NguoiDuocNuoi.hoten, NguoiDuocNuoi.quequan, 2018-year(NguoiDuocNuoi.ngaysinh) AS Tuổi FROM ChiTietPhongO INNER JOIN NguoiDuocNuoi ON ChiTietPhongO.id_nguoinuoi = NguoiDuocNuoi.id_nguoinuoi INNER JOIN PhongO ON ChiTietPhongO.id_phongo = PhongO.id_phongo WHERE PhongO.hienco = '"+songuoi+"'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
         //hết
     }
 }

@@ -412,6 +412,28 @@ namespace DEMO.Execute
             }
             return dt;
         }
+        public DataTable InChiTieuTheoTien(String tien, String trangthai)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = "SELECT ChiTietChi.*, PhatTu.tenphattu FROM ChiTietChi INNER JOIN PhatTu ON ChiTietChi.id_phattu = PhatTu.id_phattu WHERE ChiTietChi.sotien "+trangthai+" '"+tien+"'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+        
         //Hết
     }
 }

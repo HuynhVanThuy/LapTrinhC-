@@ -318,7 +318,34 @@ namespace DEMO.Execute
             }
             return dt;
         }
-        
+        //||||||||||||||||||//
+        //  PHẦN XỬ LÝ IN ẤN
+        //||||||||||||||||||//
+        int nam = DateTime.Now.Year;
+        public DataTable InNguoiDuocNuoiTuoiNhoHon(String tuoi, String trangthai)
+        {
+            DataTable dt = new DataTable();
+
+            cmd.CommandText = "SELECT * FROM NguoiDuocNuoi WHERE "+nam+"- YEAR(ngaysinh) "+trangthai+" "+tuoi+""; 
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.openCon();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                con.closeCon();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.closeCon();
+            }
+            return dt;
+        }
+
         //Hết
     }
 }

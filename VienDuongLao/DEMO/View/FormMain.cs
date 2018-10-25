@@ -637,17 +637,182 @@ namespace DEMO
 
         private void btnTienTuThienNgay_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            var formcon = new ConTKTienTuThienNgay();//tạo khai báo form cần show ra
+            {
+                foreach (var child in MdiChildren)// tìm kiếm 
+                {
+                    if (child.Name == formcon.Name)//kiểm tra tồn
+                    {
+                        child.Activate();//active
+                        child.Activate();
+                        return;//trả về
+                    }
+                }
+            }
+            formcon.MdiParent = this;//nếu chưa tồn thì gọi nó ra
+            formcon.Show();//hiển thị lên
         }
 
         private void btnTienTuThienThang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            var formcon = new ConTKTienTuThienThang();//tạo khai báo form cần show ra
+            {
+                foreach (var child in MdiChildren)// tìm kiếm 
+                {
+                    if (child.Name == formcon.Name)//kiểm tra tồn
+                    {
+                        child.Activate();//active
+                        child.Activate();
+                        return;//trả về
+                    }
+                }
+            }
+            formcon.MdiParent = this;//nếu chưa tồn thì gọi nó ra
+            formcon.Show();//hiển thị lên
         }
 
         private void btnTienTuThienNam_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            var formcon = new ConTKTienTuThienNam();//tạo khai báo form cần show ra
+            {
+                foreach (var child in MdiChildren)// tìm kiếm 
+                {
+                    if (child.Name == formcon.Name)//kiểm tra tồn
+                    {
+                        child.Activate();//active
+                        child.Activate();
+                        return;//trả về
+                    }
+                }
+            }
+            formcon.MdiParent = this;//nếu chưa tồn thì gọi nó ra
+            formcon.Show();//hiển thị lên
+        }
 
+        private void btnInPhatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var formcon = new InPhatTu();//tạo khai báo form cần show ra
+            {
+                foreach (var child in MdiChildren)// tìm kiếm 
+                {
+                    if (child.Name == formcon.Name)//kiểm tra tồn
+                    {
+                        child.Activate();//active
+                        child.Activate();
+                        return;//trả về
+                    }
+                }
+            }
+            formcon.MdiParent = this;//nếu chưa tồn thì gọi nó ra
+            formcon.Show();//hiển thị lên
+        }
+
+        private void btnInTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var formcon = new InTaiKhoan();//tạo khai báo form cần show ra
+            {
+                foreach (var child in MdiChildren)// tìm kiếm 
+                {
+                    if (child.Name == formcon.Name)//kiểm tra tồn
+                    {
+                        child.Activate();//active
+                        child.Activate();
+                        return;//trả về
+                    }
+                }
+            }
+            formcon.MdiParent = this;//nếu chưa tồn thì gọi nó ra
+            formcon.Show();//hiển thị lên
+        }
+
+        private void btnInLichlamViec_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var formcon = new InLichLamViec();//tạo khai báo form cần show ra
+            {
+                foreach (var child in MdiChildren)// tìm kiếm 
+                {
+                    if (child.Name == formcon.Name)//kiểm tra tồn
+                    {
+                        child.Activate();//active
+                        child.Activate();
+                        return;//trả về
+                    }
+                }
+            }
+            formcon.MdiParent = this;//nếu chưa tồn thì gọi nó ra
+            formcon.Show();//hiển thị lên
+        }
+
+        private void btnInLichViengTham_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var formcon = new InLichViengTham();//tạo khai báo form cần show ra
+            {
+                foreach (var child in MdiChildren)// tìm kiếm 
+                {
+                    if (child.Name == formcon.Name)//kiểm tra tồn
+                    {
+                        child.Activate();//active
+                        child.Activate();
+                        return;//trả về
+                    }
+                }
+            }
+            formcon.MdiParent = this;//nếu chưa tồn thì gọi nó ra
+            formcon.Show();//hiển thị lên
+        }
+
+        private void btnInPhongO_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var formcon = new InPhongO();//tạo khai báo form cần show ra
+            {
+                foreach (var child in MdiChildren)// tìm kiếm 
+                {
+                    if (child.Name == formcon.Name)//kiểm tra tồn
+                    {
+                        child.Activate();//active
+                        child.Activate();
+                        return;//trả về
+                    }
+                }
+            }
+            formcon.MdiParent = this;//nếu chưa tồn thì gọi nó ra
+            formcon.Show();//hiển thị lên
+        }
+
+        private void btnInTienTuThien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var formcon = new InTienTuThien();//tạo khai báo form cần show ra
+            {
+                foreach (var child in MdiChildren)// tìm kiếm 
+                {
+                    if (child.Name == formcon.Name)//kiểm tra tồn
+                    {
+                        child.Activate();//active
+                        child.Activate();
+                        return;//trả về
+                    }
+                }
+            }
+            formcon.MdiParent = this;//nếu chưa tồn thì gọi nó ra
+            formcon.Show();//hiển thị lên
+        }
+
+        private void btnInChiTieu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var formcon = new InchiTieuHangNgay();//tạo khai báo form cần show ra
+            {
+                foreach (var child in MdiChildren)// tìm kiếm 
+                {
+                    if (child.Name == formcon.Name)//kiểm tra tồn
+                    {
+                        child.Activate();//active
+                        child.Activate();
+                        return;//trả về
+                    }
+                }
+            }
+            formcon.MdiParent = this;//nếu chưa tồn thì gọi nó ra
+            formcon.Show();//hiển thị lên
         }
 
 

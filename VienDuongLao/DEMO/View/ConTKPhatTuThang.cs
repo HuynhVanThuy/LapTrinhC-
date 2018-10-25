@@ -49,8 +49,7 @@ namespace DEMO.View
                 if (gridViewTKPhatTu.RowCount > 0)
                 {
                     XtraReport rp = new XtraReport();
-                    rp.DataSource = gridTKPhatTu.DataSource;
-                    //rp.LoadLayout(Application.StartupPath + @"\ReportMauPhatTu.repx");
+                    rp.DataSource = gridTKPhatTu.DataSource; 
                     rp.LoadLayout(Application.StartupPath + @"\ReportTKPhatTuToanBoThang.repx");
                     //rp.ShowDesignerDialog();
                     rp.ShowPreviewDialog();
@@ -64,9 +63,8 @@ namespace DEMO.View
                 if (gridViewTKPhatTu.RowCount > 0)
                 {
                     XtraReport rp = new XtraReport();
-                    rp.DataSource = gridTKPhatTu.DataSource;
-                    //rp.LoadLayout(Application.StartupPath + @"\ReportMauPhatTu.repx");
-                    rp.LoadLayout(Application.StartupPath + @"\ReportTKPhatTuToanBoMotThang.repx");
+                    rp.DataSource = gridTKPhatTu.DataSource; 
+                    rp.LoadLayout(Application.StartupPath + @"\ReportTKPhatTuToanBoThang.repx");
                     //rp.ShowDesignerDialog();
                     rp.ShowPreviewDialog();
                 }
@@ -80,8 +78,7 @@ namespace DEMO.View
                 if (gridViewTKPhatTu.RowCount > 0)
                 {
                     XtraReport rp = new XtraReport();
-                    rp.DataSource = gridTKPhatTu.DataSource;
-                    //rp.LoadLayout(Application.StartupPath + @"\ReportMauPhatTu.repx");
+                    rp.DataSource = gridTKPhatTu.DataSource; 
                     rp.LoadLayout(Application.StartupPath + @"\ReportTKPhatTuTungNgayMotThang.repx");
                     //rp.ShowDesignerDialog();
                     rp.ShowPreviewDialog();
